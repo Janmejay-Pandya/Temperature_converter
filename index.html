@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Temperature Control Site</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Base styles for body */
+    body {
+        background-color: rgb(126, 171, 234);
+        font-family: Arial, sans-serif;
+    }
+    
+    /* Heading styles */
+    h1 {
+        text-align: center;
+        font-size: 2rem;
+        font-style: italic;
+        text-decoration: underline black 2px;
+        margin: 20px 0;
+    }
+    
+    /* Container styles */
+    .temp_box {
+        border: 11px double rgb(34, 70, 122);
+        width: 90%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 18px;
+        border-radius: 20px;
+        text-align: center;
+        background-color: white;
+    }
+    
+    /* Temperature unit styles */
+    .celsius, .fahrenheit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+    
+    #Celsius, #Fahrenheit {
+        margin: 0 12px;
+        padding: 3px 12px;
+        border-radius: 12px;
+        background-color: rgb(0, 247, 255);
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    #Celsius:hover, #Fahrenheit:hover {
+        background-color: rgb(104, 188, 191);
+    }
+    
+    /* Result styles */
+    #result {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+    
+    /* Header 3 styles */
+    h3 {
+        font-size: 1.25rem;
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    /* Media queries for responsiveness */
+    @media screen and (max-width: 768px) {
+        /* Adjust styles for smaller screens */
+        h1 {
+            font-size: 1.5rem;
+        }
+    
+        .temp_box {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        /* Adjust other styles as needed */
+    }
+    
+</style>
+
+<body>
+    <h1 class="main_line">Temperature Conversion</h1>
+    <div class="temp_box">
+        <div class="celsius">
+            <h2>Celsius:</h2>
+            <input type="number" id="Fahrenheit" placeholder="Enter in Celsius">
+            <button onclick="convert_to_celsius()"> Convert to Fahrenheit</button>
+        </div>
+        <br>
+        <div class="fahrenheit">
+            <h2>Fahrenheit:</h2>
+            <input type="number" id="Celsius" placeholder="Enter in Fahrenheit">
+            <button onclick="convert_to_fahrenheit()"> Convert to Celsius</button>
+        </div>
+        <p id="result"></p>
+
+    </div>
+
+    <script src="./index.js"></script>
+
+
+</body>
+
+</html>
